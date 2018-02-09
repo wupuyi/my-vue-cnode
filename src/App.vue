@@ -1,15 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <my-header></my-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import MyHeader from '@/components/Header/Header'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    MyHeader
+  }
 }
 </script>
 
-<style>
-
+<style lang="stylus">
+@import 'common/stylus/variable'
+body
+  color $color-text
 </style>
