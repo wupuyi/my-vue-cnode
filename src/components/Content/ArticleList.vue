@@ -1,14 +1,17 @@
 <template>
-  <div>
-    <h1>我就是文章列表</h1>
+  <div class="article-list">
+    <article-list-content></article-list-content>
   </div>
 </template>
 
 <script>
+import ArticleListContent from './ArticleListContent'
 export default {
+  components: {
+    ArticleListContent
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-
 </style>
