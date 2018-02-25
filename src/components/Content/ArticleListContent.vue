@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h2 class="title">企业级 Node.js 框架 Egg 发布 2.0，性能提升 30%，拥抱 Async</h2>
+    <h2 class="title">{{ article.title }}</h2>
     <div class="author">
-      <img src="https://avatars1.githubusercontent.com/u/227713?v=3&s=120" title="atian25" class="author-avatar">
+      <img :src="article.author.avatar_url" :title="article.author.name" class="author-avatar">
       <div class="info">
         <p>
-          <span class="name">atian25</span>
-          <span class="status"><b>250</b>/222222</span>
+          <span class="name">{{ article.author.name }}</span>
+          <span class="status"><b>{{ article.reply_count }}</b>/{{ article.visit_count }}</span>
         </p>
         <p>
           <span>2月前</span>
@@ -33,8 +33,9 @@ export default {
 <style lang="stylus" scoped>
 @import '~common/stylus/variable'
 .container
+  color $color-text
   padding 10px 15px
-  border-bottom 1px solid #cccccc
+  border-bottom 1px solid $color-border
 .title
   margin 0
   margin-bottom 10px
@@ -49,7 +50,7 @@ export default {
     width 40px
     height 40px
     border-radius 50%
-    border 1px solid #f3f3f3
+    border 1px solid $color-avatar
   .info
     margin-left 10px
     width 100%
