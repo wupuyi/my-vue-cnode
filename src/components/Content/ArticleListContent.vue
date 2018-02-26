@@ -5,7 +5,7 @@
       <img :src="article.author.avatar_url" :title="article.author.name" class="author-avatar">
       <div class="info">
         <p>
-          <span class="name">{{ article.author.name }}</span>
+          <span class="name">{{ article.author.loginname }}</span>
           <span class="status"><b>{{ article.reply_count }}</b>/{{ article.visit_count }}</span>
         </p>
         <p>
