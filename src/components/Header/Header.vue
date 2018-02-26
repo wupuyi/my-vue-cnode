@@ -1,7 +1,9 @@
 <template>
   <div class="header">
+    <router-link to="/" tag="div">
       <i class="iconfont icon-nodejs"></i>
       <h1 class="logo-title">Cnode 社区</h1>
+    </router-link>
   </div>
 </template>
 
@@ -14,10 +16,11 @@ export default {
 @import '~common/stylus/variable'
 
 div.header
-  display flex
-  align-items center
-  justify-content center
   background-color $color-background
+  div
+    display flex
+    align-items center
+    justify-content center
 h1.logo-title
   font-weight normal
   font-size 26px
